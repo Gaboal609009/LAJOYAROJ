@@ -1,0 +1,30 @@
+import matplotlib.pyplot as plt
+
+# Años a comparar
+years = [2017, 2019, 2025]
+
+# Datos hipotéticos de elasticidad
+elasticity_demand = [-0.55, -0.65, -0.80]
+elasticity_supply = [0.60, 0.75, 0.90]
+
+# Configuración de la figura
+plt.figure(figsize=(8, 5))
+
+# Graficar elasticidad de la demanda
+plt.plot(years, elasticity_demand, marker='o', linestyle='-', color='blue', label='Elasticidad de la Demanda')
+
+# Graficar elasticidad de la oferta
+plt.plot(years, elasticity_supply, marker='s', linestyle='--', color='green', label='Elasticidad de la Oferta')
+
+# Personalización del gráfico
+plt.title('Evolución de la Elasticidad de la Demanda y Oferta\nLa Joya Roja, C.A. (2017, 2019, 2025)')
+plt.xlabel('Año')
+plt.ylabel('Elasticidad')
+plt.xticks(years)
+plt.axhline(0, color='black', linewidth=0.8, linestyle='dashed')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+
+# Mostrar la gráfica
+plt.show()
